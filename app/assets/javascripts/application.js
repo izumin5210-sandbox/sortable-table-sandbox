@@ -12,4 +12,5 @@
 //
 //= require angularjs
 //= require angular-resource
+//= require sortable_table_sandbox
 //= require_tree .

@@ -1,20 +1,16 @@
 h1 Listing fruits
 
-table.table.table-hover
+table.table.table-hover[ng-controller="FruitsCtrl as ctrl"]
   thead
     tr
       th Name
       th
-      th
-      th
 
   tbody
-    - @fruits.each do |fruit|
-      tr
-        td = fruit.name
-        td = link_to 'Show', fruit
-        td = link_to 'Edit', edit_fruit_path(fruit)
-        td = link_to 'Destroy', fruit, data: {:confirm => 'Are you sure?'}, :method => :delete
+    tr[ng-repeat="fruit in ctrl.fruits"]
+      td 
+        | {{fruit.name}}
+      td: a[ng-href="/fruits/{{fruit.id}}"] Show
 
 br
 
