@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :fruits do
+  resources :fruits, only: [:index, :show, :edit, :update] do
     patch :sort
     put :sort
   end
