@@ -11,6 +11,8 @@ group :default do
   gem 'jbuilder', '~> 2.0'
   gem 'slim-rails'
 
+  gem 'ranked-model'
+
   gem 'rails-assets-bootstrap-sass-official'
   gem 'rails-assets-angularjs'
   gem 'rails-assets-angular-resource'
