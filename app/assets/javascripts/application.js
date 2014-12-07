@@ -10,7 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery-ui
 //= require angularjs
 //= require angular-resource
+//= require angular-ui-sortable
 //= require sortable_table_sandbox
 //= require_tree .

@@ -1,5 +1,5 @@
 class FruitsController < ApplicationController
-  before_action :set_fruit, only: [:show, :edit, :update, :destroy]
+  before_action :set_fruit, only: [:show, :edit, :update, :destroy, :sort]
 
   # GET /fruits
   # GET /fruits.json
@@ -61,6 +61,11 @@ class FruitsController < ApplicationController
     end
   end
 
+  def sort
+    @fruit.update(sort_fruit_params)
+    render :show, status: :ok, location: @fruit
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_fruit
@@ -70,5 +75,9 @@ class FruitsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fruit_params
       params.require(:fruit).permit(:name)
+    end
+
+    def sort_fruit_params
+      params.permit(:row_order_position)
     end
 end

@@ -2,7 +2,8 @@ Fruit = ($resource) ->
   url = '/fruits/:id.json'
   paramsDefaults = id: '@id'
   actions =
-    update:
+    sort:
+      url: '/fruits/:id/sort.json'
       method: 'PATCH'
 
   $resource(url, paramsDefaults, actions)

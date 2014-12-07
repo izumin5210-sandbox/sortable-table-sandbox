@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :fruits
+  resources :fruits do
+    patch :sort
+    put :sort
+  end
 
   root 'fruits#index'
 

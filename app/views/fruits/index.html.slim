@@ -6,7 +6,7 @@ table.table.table-hover[ng-controller="FruitsCtrl as ctrl"]
       th Name
       th
 
-  tbody
+  tbody[ui-sortable='ctrl.sortableOptions' ng-model="ctrl.fruits"]
     tr[ng-repeat="fruit in ctrl.fruits"]
       td 
         | {{fruit.name}}

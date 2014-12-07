@@ -16,6 +16,7 @@ group :default do
   gem 'rails-assets-bootstrap-sass-official'
   gem 'rails-assets-angularjs'
   gem 'rails-assets-angular-resource'
+  gem 'rails-assets-angular-ui-sortable'
 end
 
 group :development do
