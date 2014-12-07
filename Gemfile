@@ -8,14 +8,12 @@ group :default do
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
 
-  gem 'turbolinks'
-
   gem 'jbuilder', '~> 2.0'
   gem 'slim-rails'
 
-  gem 'rails-assets-jquery'
-  gem 'rails-assets-jquery-ujs'
   gem 'rails-assets-bootstrap-sass-official'
+  gem 'rails-assets-angularjs'
+  gem 'rails-assets-angular-resource'
 end
 
 group :development do
