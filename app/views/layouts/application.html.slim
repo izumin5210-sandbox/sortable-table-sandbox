@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    title
+      = content_for?(:title) ? yield(:title) : 'Sortable Table Sandbox'
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Sortable Table Sandbox'}"
+    == stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true
+    == javascript_include_tag 'application', 'data-turbolinks-track' => true
+    == csrf_meta_tags
+  body
+    header
+      nav.navbar.navbar-fixed-top
+        .container
+          .navbar-header
+            button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            = link_to 'Home', root_path, class: 'navbar-brand'
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+    main[role="main"]
+      .container
+        .row
+          .col-md-12
+            == yield
