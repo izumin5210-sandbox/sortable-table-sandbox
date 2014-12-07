@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 group :default do
   gem 'rails', '4.1.8'
@@ -11,6 +12,10 @@ group :default do
 
   gem 'jbuilder', '~> 2.0'
   gem 'slim-rails'
+
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-jquery-ujs'
+  gem 'rails-assets-bootstrap-sass-official'
 end
 
 group :development do
